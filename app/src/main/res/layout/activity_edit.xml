@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".EditActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAdmin"
+        android:background="@color/green"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:menu="@menu/menu_topbar_edit"
+        app:titleTextAppearance="@style/custom_text_toolbar"
+        app:titleTextColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:hint="@string/tanggal"
+                android:textSize="15sp"
+                android:background="@drawable/bg_edt_edit"
+                android:paddingVertical="15dp"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/edtTanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <EditText
+                android:hint="@string/catatan"
+                android:background="@drawable/bg_edt_edit"
+                android:paddingVertical="15dp"
+                android:paddingHorizontal="10dp"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/edtCatatan"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnKonfirmasi"
+                    android:layout_marginStart="10dp"
+                    android:textSize="13sp"
+                    app:cornerRadius="10dp"
+                    app:backgroundTint="@color/green"
+                    android:text="@string/konfirmasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:visibility="gone"
+                    android:layout_toEndOf="@id/btnUpdateData"
+                    android:id="@+id/btnBatalKonfirmasi"
+                    android:layout_marginStart="10dp"
+                    android:textSize="13sp"
+                    app:cornerRadius="10dp"
+                    app:backgroundTint="@android:color/holo_red_dark"
+                    android:text="@string/batalkan_konfirmasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnUpdateData"
+                    android:layout_toEndOf="@id/btnKonfirmasi"
+                    android:layout_marginStart="10dp"
+                    android:textSize="13sp"
+                    app:cornerRadius="10dp"
+                    app:backgroundTint="@color/white"
+                    android:textColor="@color/green"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/green"
+                    android:text="@string/update_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
